@@ -71,6 +71,9 @@ main .section-container section:nth-child(1) .card:nth-child(3) {
 main .section-container section:nth-child(1) .card:nth-child(4) {
   animation: fadein 0.5s linear forwards 0.4s;
 }
+main .section-container section:nth-child(1) .card:nth-child(5) {
+  animation: fadein 0.5s linear forwards 0.6s;
+}
 main .section-container section:nth-child(2) .card:nth-child(2) {
   animation: fadein 0.5s linear forwards 0.6s;
 }
@@ -283,6 +286,7 @@ footer li i {
   main .section-container {
     display: flex;
     flex-direction: row;
+    align-items: flex-start;
     justify-content: space-between;
     flex-wrap: wrap;
     width: 80%;
