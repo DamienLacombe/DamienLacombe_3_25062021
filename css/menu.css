@@ -1,0 +1,310 @@
+footer, main .section-container section, main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer li, main .section-container section .card .content .h3__description, main .section-container section .card, main .title, header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+html {
+  font-size: 9px;
+}
+
+header nav {
+  position: relative;
+  padding: 18px 0 8px 0;
+  background-color: #ececec;
+}
+header nav a {
+  position: absolute;
+  left: 30px;
+}
+header nav a i {
+  font-size: 2.4rem;
+  color: #3e3e3e;
+}
+header nav h1 {
+  font-size: 3.2rem;
+}
+header img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-position: 50% 60%;
+}
+
+main {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #ececec;
+  margin-top: -50px;
+  position: relative;
+}
+main .title {
+  justify-content: space-between;
+  width: 90%;
+  padding: 40px 0 40px 0;
+}
+main .title h1 {
+  font-size: 3rem;
+}
+main .title i {
+  font-size: 2.5rem;
+}
+main .section-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+main .section-container section:nth-child(1) .card:nth-child(2) {
+  animation: fadein 0.5s linear forwards 0s;
+}
+main .section-container section:nth-child(1) .card:nth-child(3) {
+  animation: fadein 0.5s linear forwards 0.2s;
+}
+main .section-container section:nth-child(1) .card:nth-child(4) {
+  animation: fadein 0.5s linear forwards 0.4s;
+}
+main .section-container section:nth-child(2) .card:nth-child(2) {
+  animation: fadein 0.5s linear forwards 0.6s;
+}
+main .section-container section:nth-child(2) .card:nth-child(3) {
+  animation: fadein 0.5s linear forwards 0.8s;
+}
+main .section-container section:nth-child(2) .card:nth-child(4) {
+  animation: fadein 0.5s linear forwards 1s;
+}
+main .section-container section:nth-child(3) .card:nth-child(2) {
+  animation: fadein 0.5s linear forwards 1.2s;
+}
+main .section-container section:nth-child(3) .card:nth-child(3) {
+  animation: fadein 0.5s linear forwards 1.4s;
+}
+main .section-container section:nth-child(3) .card:nth-child(4) {
+  animation: fadein 0.5s linear forwards 1.6s;
+}
+main .section-container section {
+  margin-bottom: 30px;
+}
+main .section-container section h2 {
+  padding-bottom: 6px;
+  position: relative;
+  font-size: 1.8rem;
+  font-weight: 400;
+  margin-bottom: 8px;
+  width: 90%;
+  max-width: 450px;
+  margin: 0 0 8px 0;
+}
+main .section-container section h2::after {
+  content: "";
+  height: 3px;
+  position: absolute;
+  width: 40px;
+  height: 3px;
+  background-color: #99E2D0;
+  bottom: 0;
+  left: 0;
+}
+main .section-container section .card {
+  justify-content: space-between;
+  align-items: stretch;
+  width: 92%;
+  max-width: 450px;
+  min-width: 300px;
+  background-color: white;
+  margin: 8px 0 8px 0;
+  border-radius: 15px;
+  overflow: hidden;
+  white-space: nowrap;
+  box-shadow: 0 2px 12px #b1b1b1;
+  cursor: pointer;
+  transform: translate(0, 30%);
+  opacity: 0;
+}
+main .section-container section .card .content {
+  padding: 12px;
+  width: 100%;
+}
+main .section-container section .card .content h3 {
+  font-size: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+main .section-container section .card .content .h3__description {
+  justify-content: space-between;
+}
+main .section-container section .card .content .h3__description p {
+  font-size: 1.6rem;
+  padding: 5px 0 0 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+main .section-container section .card .content .h3__description :nth-child(2) {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+main .section-container section .card .icone-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #99E2D0;
+  width: 0;
+  transition: 0.3s;
+}
+main .section-container section .card .icone-container i {
+  position: absolute;
+  transform: rotate(90deg);
+  font-size: 2.2rem;
+  color: white;
+  transition: 0.4s;
+  animation-delay: 0.5s;
+}
+main .section-container section .card:hover .icone-container {
+  width: 20%;
+}
+main .section-container section .card:hover .h3__description :nth-child(1) {
+  margin-right: -180px;
+  max-width: 85%;
+}
+main .section-container section .card:hover h3 {
+  margin-right: -80px;
+  max-width: 85%;
+}
+main .section-container section .card:hover .icone-container i {
+  transform: rotate(360deg);
+}
+main button {
+  color: white;
+  font-size: 1.8rem;
+  padding: 18px 60px 18px 60px;
+  background: linear-gradient(175deg, #ff79da 0%, #9356dc 95%);
+  margin: 10px 0 60px 0;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main button:hover {
+  transform: scale(0.96);
+  background: linear-gradient(175deg, rgba(255, 121, 217, 0.877) 0%, rgba(147, 86, 220, 0.87) 95%);
+}
+
+footer {
+  align-items: flex-start;
+  background-color: #3e3e3e;
+  padding-bottom: 30px;
+}
+footer > * {
+  margin: 0 0 0 5%;
+  color: white;
+}
+footer h1 {
+  margin: 20px 0 20px 5%;
+  font-size: 2rem;
+  font-weight: 500;
+}
+footer li {
+  justify-content: flex-start;
+  color: white;
+  padding-bottom: 10px;
+}
+footer li > * {
+  color: white;
+  font-size: 1.7rem;
+}
+footer li i {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  width: 12px;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+    transform: translate(0, 30%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+@media (min-width: 420px) {
+  html {
+    font-size: 10px;
+  }
+
+  main .title {
+    width: 80%;
+  }
+  main .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  main .section-container section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  main .section-container section .card {
+    width: 380px;
+  }
+
+  footer {
+    align-items: center;
+  }
+  footer ul {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer h1 {
+    margin-left: 0;
+  }
+}
+@media (min-width: 900px) {
+  html {
+    font-size: 11px;
+  }
+
+  main .section-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 80%;
+  }
+
+  footer {
+    align-items: center;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 85%;
+  }
+  footer ul li {
+    width: 20%;
+    display: flex;
+    justify-content: center;
+  }
+  footer h1 {
+    margin-left: 0;
+  }
+}
+
+/*# sourceMappingURL=menu.css.map */

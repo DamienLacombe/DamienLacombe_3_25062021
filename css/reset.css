@@ -5,6 +5,7 @@
 	font-size: 10px;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+	
 }
 
 h1 {
@@ -24,6 +25,7 @@ q:before, q:after {
 a {
     text-decoration: none;
     color: black;
+	cursor: pointer;
 }
 
 button {
