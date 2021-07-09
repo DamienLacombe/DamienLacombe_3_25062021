@@ -7,9 +7,8 @@
 %horizontal--align {
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
-
 
 header {
     @extend %vertical--align;
@@ -30,7 +29,7 @@ header {
         width: 100%;
         background-color: rgba(221, 221, 221, 0.575);
         padding: 16px;
-        i{
+        i {
             font-size: 1.7rem;
             margin-right: 15px;
         }
@@ -66,7 +65,7 @@ header {
             color: white;
             border-radius: 80px;
             padding: 17px 0 17px 0;
-            background: linear-gradient(175deg, rgba(255,121,218,1) 0%, rgba(147,86,220,1) 95%);
+            background: linear-gradient(175deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 95%);
             box-shadow: 0 5px 10px rgb(173, 173, 173);
             transition: 0.5s;
             min-width: 208px;
@@ -74,7 +73,7 @@ header {
             cursor: pointer;
             &:hover {
                 transform: scale(0.96);
-                background: linear-gradient(175deg, rgba(255, 121, 217, 0.877) 0%, rgba(147,86,220,0.87) 95%);
+                background: linear-gradient(175deg, rgba(255, 121, 217, 0.877) 0%, rgba(147, 86, 220, 0.87) 95%);
             }
         }
     }
@@ -94,7 +93,6 @@ h3 {
     width: 94%;
     margin: 0 1% 0 5%;
     padding: 46px 0 46px 0;
-   
 
     li {
         @extend %horizontal--align;
@@ -111,14 +109,14 @@ h3 {
         border-radius: 23px;
         transition: 0.3s;
         cursor: pointer;
-        
+
         .number {
             @extend %horizontal--align;
             font-weight: 400;
             font-size: 1.4rem;
             margin-left: -14px;
             color: rgb(235, 235, 235);
-            background-color: rgba(147,86,220,1);
+            background-color: rgba(147, 86, 220, 1);
             min-width: 26px;
             min-height: 26px;
             border-radius: 50px;
@@ -134,7 +132,7 @@ h3 {
         &:hover {
             background-color: rgba(115, 21, 223, 0.103);
             i {
-                color: rgba(147,86,220,1);
+                color: rgba(147, 86, 220, 1);
             }
         }
     }
@@ -144,7 +142,6 @@ h3 {
     background-color: rgb(240, 240, 240);
     padding: 50px 0 50px 5%;
     .card-container {
-        
         .card-container_card {
             @extend %vertical--align;
             position: relative;
@@ -175,8 +172,8 @@ h3 {
                 position: relative;
                 width: 96%;
                 margin: auto 0 auto 10px;
-                
-                .text> * {
+
+                .text > * {
                     font-size: 2rem;
                     line-height: 2.6rem;
                 }
@@ -188,43 +185,43 @@ h3 {
                     background-repeat: no-repeat;
                     background-position: 0px;
                     background-size: 30px 0px;
-                    transition: .6s;
+                    transition: 0.6s;
                     top: 5px;
                     right: 20px;
                     cursor: pointer;
                     svg {
-                        position: absolute; 
+                        position: absolute;
                         width: 30px;
                         height: auto;
-                        transition: .9s;
+                        transition: 0.9s;
                         fill: black;
                         &:hover {
-                           opacity: 0;
+                            opacity: 0;
                         }
                     }
-                &:hover {
-                    background-position: 0px;
-                    background-size: 30px 30px;
-                }                   
+                    &:hover {
+                        background-position: 0px;
+                        background-size: 30px 30px;
+                    }
+                }
             }
-        }   
-    } 
-    .new::before {
-        content: "Nouveau";
-        padding: 7px 15px 7px 15px;
-        border: 1px solid rgb(140, 192, 179);
-        background-color: rgb(132, 212, 195);
-        color: rgb(0, 151, 118);
-        font-size: 1.6rem;
-        font-weight: 700;
-        border-radius: 3px;
-        top: 14px;
-        right: 14px;
-        z-index: 2;
-        position: absolute;
+        }
+        .new::before {
+            content: "Nouveau";
+            padding: 7px 15px 7px 15px;
+            border: 1px solid rgb(140, 192, 179);
+            background-color: rgb(132, 212, 195);
+            color: rgb(0, 151, 118);
+            font-size: 1.6rem;
+            font-weight: 700;
+            border-radius: 3px;
+            top: 14px;
+            right: 14px;
+            z-index: 2;
+            position: absolute;
+        }
     }
-    }
-} 
+}
 footer {
     @extend %vertical--align;
     align-items: flex-start;
@@ -233,7 +230,6 @@ footer {
     & > * {
         margin: 0 0 0 5%;
         color: white;
-        
     }
     h1 {
         margin: 20px 0 20px 5%;
@@ -245,7 +241,7 @@ footer {
         justify-content: flex-start;
         color: white;
         padding-bottom: 10px;
-        &>* {
+        & > * {
             color: white;
             font-size: 1.7rem;
         }
@@ -256,7 +252,6 @@ footer {
         }
     }
 }
-
 
 @media (min-width: 550px) {
     #fonctionnement {
@@ -286,17 +281,16 @@ footer {
             margin-left: 0;
         }
     }
-    
 }
 
 @media (min-width: 1000px) {
     #fonctionnement {
         margin: auto;
-       ul {
-           display: flex;
-           flex-wrap: wrap;
-           justify-content: center;
-       }
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
     }
 
     #restaurant {
@@ -320,7 +314,7 @@ footer {
             width: 85%;
             li {
                 width: 20%;
-                display:  flex;
+                display: flex;
                 justify-content: center;
             }
         }
@@ -332,15 +326,11 @@ footer {
 
 @media (min-width: 1290px) {
     #fonctionnement {
-        
-       ul {
+        ul {
             width: 90%;
             display: flex;
             flex-wrap: nowrap;
             justify-content: space-around;
-       }
+        }
     }
 }
-
-
-

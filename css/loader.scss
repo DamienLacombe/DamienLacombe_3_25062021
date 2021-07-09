@@ -4,7 +4,7 @@
     animation-name: anim;
     opacity: 1;
     transform: translateX(-1800px);
-    animation-timing-function: cubic-bezier(0,.6,.95,.24);
+    animation-timing-function: cubic-bezier(0, 0.6, 0.95, 0.24);
     animation-duration: 3s;
     margin: 0;
     font-size: 12rem;
@@ -29,7 +29,7 @@
             max-height: 200px;
         }
         & > * > * {
-            font-family: 'Shrikhand', cursive;
+            font-family: "Shrikhand", cursive;
         }
         &::after {
             content: "";
@@ -43,91 +43,86 @@
             animation-duration: 3s;
             animation-timing-function: linear;
         }
-    
+
         .loader_text-container_item {
             display: flex;
             margin: 0;
         }
-    
-        .loader_text-container_item.oh p:nth-child(1){
+
+        .loader_text-container_item.oh p:nth-child(1) {
             @extend %letter;
             animation-delay: 0.1s;
         }
-        
+
         .loader_text-container_item.oh p:nth-child(2) {
             @extend %letter;
             animation-delay: 0.2s;
         }
-        
-        .loader_text-container_item.my p:nth-child(1){
+
+        .loader_text-container_item.my p:nth-child(1) {
             @extend %letter;
             animation-delay: 0.3s;
         }
-        
+
         .loader_text-container_item.my p:nth-child(2) {
             @extend %letter;
             animation-delay: 0.4s;
         }
-        
-        .loader_text-container_item.food p:nth-child(1){
+
+        .loader_text-container_item.food p:nth-child(1) {
             @extend %letter;
             animation-delay: 0.5s;
         }
-        
+
         .loader_text-container_item.food p:nth-child(2) {
             @extend %letter;
             animation-delay: 0.6s;
         }
-        
-        .loader_text-container_item.food p:nth-child(3){
+
+        .loader_text-container_item.food p:nth-child(3) {
             @extend %letter;
             animation-delay: 0.7s;
         }
-        
+
         .loader_text-container_item.food p:nth-child(4) {
             @extend %letter;
             animation-delay: 0.8s;
         }
-        
-        
-        
-        @keyframes anim{
+
+        @keyframes anim {
             0% {
                 transform: translateX(0px);
                 transform: translateY(0px);
             }
-            
+
             10% {
                 transform: translateY(40px);
-                color: #9356DC;
+                color: #9356dc;
             }
-        
+
             25% {
                 transform: translateY(0px);
-                
             }
             40% {
-                transform: translateY(40px); 
-                color: #FF79DA;
+                transform: translateY(40px);
+                color: #ff79da;
             }
-        
+
             55% {
                 transform: translateY(0px);
-               
             }
-        
+
             70% {
                 transform: translateY(40px);
-                 color: #99E2D0;
+                color: #99e2d0;
             }
-            
+
             85% {
                 transform: translateY(0);
-     
             }
             100% {
                 transform: translateY(40px);
-                color:transparent;
+                color: transparent;
             }
         }
     }
@@ -138,42 +133,42 @@
         width: 0%;
     }
     15% {
-        background-color: #9356DC;
+        background-color: #9356dc;
     }
     45% {
-        background-color: #FF79DA;
+        background-color: #ff79da;
     }
     75% {
-        background-color: #99E2D0;
+        background-color: #99e2d0;
     }
     100% {
         background-color: transparent;
         width: 100%;
     }
-}   
+}
 
 @keyframes back_ground {
     0% {
         z-index: 10;
         background-color: #3e3e3e;
     }
-    
+
     90% {
-        top:0;
+        top: 0;
         opacity: 1;
     }
-    100%{
+    100% {
         top: -100%;
         background-color: #3e3e3e;
-        opacity: .5;
+        opacity: 0.5;
         z-index: 10;
     }
 }
 
 @media (max-width: 480px) {
     .loader {
-        .loader_text-container  {
-            p  {
+        .loader_text-container {
+            p {
                 font-size: 9rem !important;
             }
         }
@@ -182,17 +177,14 @@
 
 @media (max-width: 700px) {
     .loader {
-        .loader_text-container  {
+        .loader_text-container {
             display: flex;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            p  {
+            p {
                 font-size: 15rem;
             }
         }
     }
 }
-
-
-

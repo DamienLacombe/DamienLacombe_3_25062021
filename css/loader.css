@@ -79,21 +79,21 @@
   }
   10% {
     transform: translateY(40px);
-    color: #9356DC;
+    color: #9356dc;
   }
   25% {
     transform: translateY(0px);
   }
   40% {
     transform: translateY(40px);
-    color: #FF79DA;
+    color: #ff79da;
   }
   55% {
     transform: translateY(0px);
   }
   70% {
     transform: translateY(40px);
-    color: #99E2D0;
+    color: #99e2d0;
   }
   85% {
     transform: translateY(0);
@@ -109,13 +109,13 @@
     width: 0%;
   }
   15% {
-    background-color: #9356DC;
+    background-color: #9356dc;
   }
   45% {
-    background-color: #FF79DA;
+    background-color: #ff79da;
   }
   75% {
-    background-color: #99E2D0;
+    background-color: #99e2d0;
   }
   100% {
     background-color: transparent;
