@@ -1,17 +1,5 @@
-%letter {
-    display: flex;
-    align-items: flex-end;
-    animation-name: anim;
-    opacity: 1;
-    transform: translateX(-1800px);
-    animation-timing-function: cubic-bezier(0, 0.6, 0.95, 0.24);
-    animation-duration: 3s;
-    margin: 0;
-    font-size: 12rem;
-}
-
 .loader {
-    display: none;
+    z-index: -1;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -25,6 +13,8 @@
         position: relative;
         display: flex;
         justify-content: center;
+        align-items: center;
+        padding-bottom: 80px;
         & > * {
             max-height: 200px;
         }
@@ -36,7 +26,7 @@
             position: absolute;
             height: 25px;
             background-color: black;
-            bottom: -40px;
+            bottom: 30px;
             z-index: 2;
             animation-name: ani;
             animation-delay: 0s;
@@ -97,7 +87,7 @@
 
             10% {
                 transform: translateY(40px);
-                color: #9356dc;
+                color: $primary;
             }
 
             25% {
@@ -105,7 +95,7 @@
             }
             40% {
                 transform: translateY(40px);
-                color: #ff79da;
+                color: $secondary;
             }
 
             55% {
@@ -114,7 +104,7 @@
 
             70% {
                 transform: translateY(40px);
-                color: #99e2d0;
+                color: $tertiary;
             }
 
             85% {
@@ -133,13 +123,13 @@
         width: 0%;
     }
     15% {
-        background-color: #9356dc;
+        background-color: $primary;
     }
     45% {
-        background-color: #ff79da;
+        background-color: $secondary;
     }
     75% {
-        background-color: #99e2d0;
+        background-color: $tertiary;
     }
     100% {
         background-color: transparent;
@@ -169,7 +159,7 @@
     .loader {
         .loader_text-container {
             p {
-                font-size: 9rem !important;
+                font-size: 5rem !important;
             }
         }
     }
@@ -178,12 +168,11 @@
 @media (max-width: 700px) {
     .loader {
         .loader_text-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
+            &::after {
+                height: 15px;
+            }
             p {
-                font-size: 15rem;
+                font-size: 8rem;
             }
         }
     }

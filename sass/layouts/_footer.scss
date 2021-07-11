@@ -1,0 +1,30 @@
+footer {
+    @extend %vertical--align;
+    align-items: flex-start;
+    background-color: #3e3e3e;
+    padding-bottom: 30px;
+    & > * {
+        margin: 0 0 0 5%;
+        color: white;
+    }
+    h1 {
+        margin: 20px 0 20px 5%;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+    li {
+        @extend %horizontal--align;
+        justify-content: flex-start;
+        color: white;
+        padding-bottom: 10px;
+        & > * {
+            color: white;
+            font-size: 1.7rem;
+        }
+        i {
+            font-size: 1.5rem;
+            margin-right: 10px;
+            width: 12px;
+        }
+    }
+}

@@ -1,14 +1,9 @@
-%vertical--align {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+@import "../utils/variables";
+@import "../utils/placeholders";
+@import "../components/btn";
+@import "../components/svg";
+@import "../layouts/_footer";
 
-%horizontal--align {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 html {
     font-size: 9px;
 }
@@ -17,7 +12,6 @@ header {
         @extend %horizontal--align;
         position: relative;
         padding: 18px 0 8px 0;
-        background-color: rgb(240, 240, 240);
 
         a {
             position: absolute;
@@ -44,7 +38,7 @@ main {
     @extend %vertical--align;
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
-    background-color: rgb(240, 240, 240);
+    background-color: $backgroundColor;
     margin-top: -50px;
     position: relative;
 
@@ -67,38 +61,38 @@ main {
         justify-content: space-between;
         & section:nth-child(1) {
             & .card:nth-child(2) {
-                animation: fadein 0.5s linear forwards 3.6s;
+                animation: fadein 0.5s linear forwards .6s;
             }
             & .card:nth-child(3) {
-                animation: fadein 0.5s linear forwards 3.8s;
+                animation: fadein 0.5s linear forwards .8s;
             }
             & .card:nth-child(4) {
-                animation: fadein 0.5s linear forwards 4s;
+                animation: fadein 0.5s linear forwards 1s;
             }
             & .card:nth-child(5) {
-                animation: fadein 0.5s linear forwards 4.2s;
+                animation: fadein 0.5s linear forwards 1.2s;
             }
         }
         & section:nth-child(2) {
             & .card:nth-child(2) {
-                animation: fadein 0.5s linear forwards 4.2s;
+                animation: fadein 0.5s linear forwards 1.2s;
             }
             & .card:nth-child(3) {
-                animation: fadein 0.5s linear forwards 4.4s;
+                animation: fadein 0.5s linear forwards 1.4s;
             }
             & .card:nth-child(4) {
-                animation: fadein 0.5s linear forwards 4.6s;
+                animation: fadein 0.5s linear forwards 1.6s;
             }
         }
         & section:nth-child(3) {
             & .card:nth-child(2) {
-                animation: fadein 0.5s linear forwards 4.8s;
+                animation: fadein 0.5s linear forwards 1.8s;
             }
             & .card:nth-child(3) {
-                animation: fadein 0.5s linear forwards 5s;
+                animation: fadein 0.5s linear forwards 2s;
             }
             & .card:nth-child(4) {
-                animation: fadein 0.5s linear forwards 5.2s;
+                animation: fadein 0.5s linear forwards 2.2s;
             }
         }
         section {
@@ -121,7 +115,7 @@ main {
                     position: absolute;
                     width: 40px;
                     height: 3px;
-                    background-color: #99e2d0;
+                    background-color: $tertiary;
                     bottom: 0;
                     left: 0;
                 }
@@ -148,9 +142,7 @@ main {
                     width: 100%;
                     h3 {
                         font-size: 2rem;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
+                        @extend %text-elypsis;
                     }
                     .h3__description {
                         @extend %horizontal--align;
@@ -158,9 +150,8 @@ main {
                         p {
                             font-size: 1.6rem;
                             padding: 5px 0 0 0;
-                            text-overflow: ellipsis;
-                            white-space: nowrap;
-                            overflow: hidden;
+                            @extend %text-elypsis
+                            
                         }
                         & :nth-child(2) {
                             font-size: 1.7rem;
@@ -173,13 +164,13 @@ main {
                     justify-content: center;
                     align-items: center;
                     position: relative;
-                    background-color: #99e2d0;
+                    background-color: $tertiary;
                     width: 0;
                     transition: 0.3s;
                     i {
                         position: absolute;
                         transform: rotate(90deg);
-                        font-size: 2.2rem;
+                        font-size: 2.8rem;
                         color: rgb(245, 245, 245);
                         transition: 0.4s;
                         animation-delay: 0.5s;
@@ -188,11 +179,8 @@ main {
                 &:hover .icone-container {
                     width: 20%;
                 }
-                &:hover .h3__description :nth-child(1) {
-                    margin-right: -180px;
-                    max-width: 85%;
-                }
-                &:hover h3 {
+
+                &:hover h3, &:hover .h3__description :nth-child(1){
                     margin-right: -80px;
                     max-width: 85%;
                 }
@@ -201,54 +189,10 @@ main {
                 }
             }
         }
-    }
-
-    button {
-        color: white;
-        font-size: 1.8rem;
-        padding: 18px 60px 18px 60px;
-        background: linear-gradient(175deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 95%);
-        margin: 10px 0 60px 0;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: 0.3s;
-        &:hover {
-            transform: scale(0.96);
-            background: linear-gradient(175deg, rgba(255, 121, 217, 0.877) 0%, rgba(147, 86, 220, 0.87) 95%);
-        }
-    }
+    } 
 }
 
-footer {
-    @extend %vertical--align;
-    align-items: flex-start;
-    background-color: #3e3e3e;
-    padding-bottom: 30px;
-    & > * {
-        margin: 0 0 0 5%;
-        color: white;
-    }
-    h1 {
-        margin: 20px 0 20px 5%;
-        font-size: 2rem;
-        font-weight: 500;
-    }
-    li {
-        @extend %horizontal--align;
-        justify-content: flex-start;
-        color: white;
-        padding-bottom: 10px;
-        & > * {
-            color: white;
-            font-size: 1.7rem;
-        }
-        i {
-            font-size: 1.5rem;
-            margin-right: 10px;
-            width: 12px;
-        }
-    }
-}
+
 @keyframes fadein {
     from {
         opacity: 0;
@@ -266,31 +210,7 @@ footer {
     }
     main {
         .title {
-            width: 80%;
-            .svg {
-                width: 30px;
-                height: 30px;
-                background: url("heart.svg");
-                background-repeat: no-repeat;
-                background-position: 0px;
-                background-size: 30px 0px;
-                transition: 0.6s;
-                cursor: pointer;
-                svg {
-                    position: absolute;
-                    width: 30px;
-                    height: auto;
-                    transition: 0.9s;
-                    fill: black;
-                    &:hover {
-                        opacity: 0;
-                    }
-                }
-                &:hover {
-                    background-position: 0px;
-                    background-size: 30px 30px;
-                }
-            }
+            max-width: 410px;
         }
         .section-container {
             display: flex;
@@ -323,11 +243,14 @@ footer {
     }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 1550px) {
     html {
         font-size: 11px;
     }
     main {
+        .title {
+            width: 80%;
+        }
         .section-container {
             display: flex;
             flex-direction: row;

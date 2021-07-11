@@ -1,18 +1,13 @@
-%vertical--align {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-%horizontal--align {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+@import "../utils/variables";
+@import "../utils/placeholders";
+@import "../components/btn";
+@import "../components/svg";
+@import "../layouts/_footer";
+@import "../layouts/_loader";
 
 header {
     @extend %vertical--align;
-    background-color: rgb(240, 240, 240);
+    background-color: $backgroundColor;
     color: #313131;
     h1 {
         font-size: 3rem;
@@ -27,21 +22,29 @@ header {
     .localisation {
         @extend %horizontal--align;
         width: 100%;
-        background-color: rgba(221, 221, 221, 0.575);
-        padding: 16px;
+        background-color: rgb(204, 204, 204);
+        padding: 6px;
         i {
             font-size: 1.7rem;
             margin-right: 15px;
         }
-        p {
+        input {
             font-size: 1.6rem;
             font-weight: 600;
+            background-color: inherit;
+            width: 130px;
+            height: 45px;
+            &::placeholder {
+                text-align: center;
+                font-size: 1.8rem;
+                color:rgb(54, 54, 54);
+            }        
         }
     }
     nav {
         @extend %vertical--align;
         text-align: center;
-        padding: 40px 0 60px 0;
+        padding: 40px 0 0px 0;
         h2 {
             font-size: 2.6rem;
             font-weight: 800;
@@ -53,28 +56,8 @@ header {
             font-weight: 400;
             color: rgb(88, 88, 88);
             line-height: 2.2rem;
-            margin-top: 10px;
+            margin: 10px 0 40px 0;
             width: 90%;
-        }
-
-        button {
-            width: 55%;
-            margin-top: 30px;
-            font-size: 1.7rem;
-            font-weight: 400;
-            color: white;
-            border-radius: 80px;
-            padding: 17px 0 17px 0;
-            background: linear-gradient(175deg, rgba(255, 121, 218, 1) 0%, rgba(147, 86, 220, 1) 95%);
-            box-shadow: 0 5px 10px rgb(173, 173, 173);
-            transition: 0.5s;
-            min-width: 208px;
-            max-width: 245px;
-            cursor: pointer;
-            &:hover {
-                transform: scale(0.96);
-                background: linear-gradient(175deg, rgba(255, 121, 217, 0.877) 0%, rgba(147, 86, 220, 0.87) 95%);
-            }
         }
     }
 }
@@ -116,7 +99,7 @@ h3 {
             font-size: 1.4rem;
             margin-left: -14px;
             color: rgb(235, 235, 235);
-            background-color: rgba(147, 86, 220, 1);
+            background-color: $primary;
             min-width: 26px;
             min-height: 26px;
             border-radius: 50px;
@@ -132,14 +115,14 @@ h3 {
         &:hover {
             background-color: rgba(115, 21, 223, 0.103);
             i {
-                color: rgba(147, 86, 220, 1);
+                color: $primary;
             }
         }
     }
 }
 
 #restaurant {
-    background-color: rgb(240, 240, 240);
+    background-color: $backgroundColor;
     padding: 50px 0 50px 5%;
     .card-container {
         .card-container_card {
@@ -177,40 +160,12 @@ h3 {
                     font-size: 2rem;
                     line-height: 2.6rem;
                 }
-                .svg {
-                    position: absolute;
-                    width: 30px;
-                    height: 30px;
-                    background: url("heart.svg");
-                    background-repeat: no-repeat;
-                    background-position: 0px;
-                    background-size: 30px 0px;
-                    transition: 0.6s;
-                    top: 5px;
-                    right: 20px;
-                    cursor: pointer;
-                    svg {
-                        position: absolute;
-                        width: 30px;
-                        height: auto;
-                        transition: 0.9s;
-                        fill: black;
-                        &:hover {
-                            opacity: 0;
-                        }
-                    }
-                    &:hover {
-                        background-position: 0px;
-                        background-size: 30px 30px;
-                    }
-                }
             }
         }
         .new::before {
             content: "Nouveau";
             padding: 7px 15px 7px 15px;
-            border: 1px solid rgb(140, 192, 179);
-            background-color: rgb(132, 212, 195);
+            background-color: $tertiary;
             color: rgb(0, 151, 118);
             font-size: 1.6rem;
             font-weight: 700;
@@ -222,36 +177,7 @@ h3 {
         }
     }
 }
-footer {
-    @extend %vertical--align;
-    align-items: flex-start;
-    background-color: #3e3e3e;
-    padding-bottom: 30px;
-    & > * {
-        margin: 0 0 0 5%;
-        color: white;
-    }
-    h1 {
-        margin: 20px 0 20px 5%;
-        font-size: 2rem;
-        font-weight: 500;
-    }
-    li {
-        @extend %horizontal--align;
-        justify-content: flex-start;
-        color: white;
-        padding-bottom: 10px;
-        & > * {
-            color: white;
-            font-size: 1.7rem;
-        }
-        i {
-            font-size: 1.5rem;
-            margin-right: 10px;
-            width: 12px;
-        }
-    }
-}
+
 
 @media (min-width: 550px) {
     #fonctionnement {

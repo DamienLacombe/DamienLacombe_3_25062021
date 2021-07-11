@@ -1,0 +1,21 @@
+.btn {
+    width: 55%;
+    font-size: 1.7rem;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+    border-radius: 80px;
+    padding: 17px 0 17px 0;
+    background: linear-gradient(175deg, $secondary 0%, $primary 95%);
+    box-shadow: 0 5px 10px rgb(173, 173, 173);
+    transition: 0.5s;
+    min-width: 208px;
+    max-width: 245px;
+    cursor: pointer;
+    &:hover {
+        transform: scale(0.96);
+        background: linear-gradient(175deg, rgba(255, 121, 217, 0.877) 0%, rgba(147, 86, 220, 0.87) 95%);
+        box-shadow: 0 5px 10px rgb(151, 151, 151);
+    }
+}
