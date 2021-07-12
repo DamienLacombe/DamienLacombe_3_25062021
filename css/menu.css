@@ -307,7 +307,7 @@ main .section-container section .card:hover .icone-container i {
     margin-left: 0;
   }
 }
-@media (min-width: 1550px) {
+@media (min-width: 1150px) {
   html {
     font-size: 11px;
   }
@@ -319,11 +319,22 @@ main .section-container section .card:hover .icone-container i {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
-    width: 80%;
+    width: 95%;
   }
 
+  main .section-container section {
+    margin: 25px;
+  }
+
+  main .section-container section h2 {
+    text-align: center;
+  }
+
+  main .section-container section h2::after {
+    left: 160px;
+  }
   footer {
     align-items: center;
   }
@@ -341,6 +352,23 @@ main .section-container section .card:hover .icone-container i {
   footer h1 {
     margin-left: 0;
   }
+}
+
+@media (min-width: 1422px) {
+  main .section-container section h2 {
+    text-align:left;
+  }
+
+  main .section-container section h2::after {
+    left: 0px;
+  }
+}
+@media (min-width: 1750px) {
+  main .section-container {
+    width: 80%;
+  }
+
+  
 }
 
 /*# sourceMappingURL=menu.css.map */
